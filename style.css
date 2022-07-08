@@ -1,0 +1,111 @@
+:root {
+	--fg-color-light: #202020;
+	--bg-color-light: #fff;
+
+	--fg-color-dark: #fff;
+	--bg-color-dark: #202020;
+
+	--fg-color: var(--fg-color-light);
+	--bg-color: var(--bg-color-light);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--fg-color: var(--fg-color-dark);
+		--bg-color: var(--bg-color-dark);
+	}
+}
+
+html, body {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+
+	width: 100%;
+
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1rem;
+}
+
+body {
+	color: var(--fg-color);
+	background-color: var(--bg-color);
+}
+
+a {
+	text-decoration: none;
+	color: #00cc32;
+}
+
+a:visited {
+	color: #00cc32;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #00aa32;
+}
+
+
+.footer {
+	flex: 1;
+
+	text-align: center;
+	padding: 1em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+	height: 100%;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emoji {
+  width: 10em;
+  height: 10em;
+}
+
+.hands {
+  font-size: 0.75em;
+}
+
+
+#pleading-face #left-hand {
+  transition: all 0.75s ease-out;
+  transform: translateX(-5em);
+  visibility: hidden;
+  opacity: 0;
+}
+
+#pleading-face #right-hand {
+  transition: all 0.75s ease-out;
+  transform: translateX(5em);
+  visibility: hidden;
+  opacity: 0;
+}
+
+#pleading-face:hover #left-hand {
+  transform: translateX(0em);
+  visibility: visible;
+  opacity: 1;
+}
+
+#pleading-face:hover #right-hand {
+  transform: translateX(0em);
+  visibility: visible;
+  opacity: 1;
+}
