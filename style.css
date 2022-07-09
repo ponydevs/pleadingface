@@ -85,27 +85,21 @@ a:hover {
 
 
 #pleading-face #left-hand {
-  transition: all 0.75s ease-out;
   transform: translateX(-5em);
-  visibility: hidden;
-  opacity: 0;
 }
 
 #pleading-face #right-hand {
-  transition: all 0.75s ease-out;
   transform: translateX(5em);
+}
+
+#pleading-face .hand {
+  transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out, visibility 0.75s ease-in-out;
   visibility: hidden;
   opacity: 0;
 }
 
-#pleading-face:hover #left-hand {
-  transform: translateX(0em);
-  visibility: visible;
-  opacity: 1;
-}
-
-#pleading-face:hover #right-hand {
-  transform: translateX(0em);
+#pleading-face:hover .hand {
+  transform: translateX(0em) !important;
   visibility: visible;
   opacity: 1;
 }
